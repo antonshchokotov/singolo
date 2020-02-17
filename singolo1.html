@@ -29,6 +29,7 @@
     </div>
     <div class="header__bottom"></div>
   </header>
+
   <main class="main">
     <div class="hero">
       <div class="hero__top">
@@ -39,10 +40,12 @@
           <div class="hero__smartphone-vertical">
             <img src="./assets/smartphone-vertical.svg" alt="smartphone-vertical">
             <div class="hero__screen-vertical"></div>
+            <div class="smartphone-button-vertical" onclick="toggleScreen('hero__screen-vertical')"></div>
           </div>
           <div class="hero__smartphone-horizontal">
             <img src="./assets/smartphone-horizontal.svg" alt="smartphone-horizontal">
             <div class="hero__screen-horizontal"></div>
+            <div class="smartphone-button-horizontal" onclick="toggleScreen('hero__screen-horizontal')"></div>
           </div>
           <div class="hero__arrow hero__arrow--right">
             <img src="./assets/chev-r.svg" alt="arrow-right">
@@ -52,19 +55,13 @@
       <div class="hero__bottom"></div>
     </div>
 
-
-
-
     <div class="services">
       <div class="services__top">
-
         <div class="services__description">
           <h2>Our Services</h2>
           <p><span>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor</span> ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         </div>
-
         <div class="services__list">
-
           <div class="service service--pen">
             <div class="icon"><img src="./assets/pen.svg" alt="pen"></div>
             <div class="service__about">
@@ -72,7 +69,6 @@
               <p><span>Curabitur vestibulum eget mauris quis laoreet.</span> Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
             </div>
           </div>
-
           <div class="service service--bulb">
             <div class="icon"><img src="./assets/bulb.svg" alt="bulb"></div>
             <div class="service__about">
@@ -80,7 +76,6 @@
               <p>Quisque luctus, quam eget molestie com-modo,<span> lacus purus cursus purus, nec</span> rutrum tellus dolor id lorem.</p>
             </div>
           </div>
-
           <div class="service service--heart">
             <div class="icon"><img src="./assets/heart.svg" alt="heart"></div>
             <div class="service__about">
@@ -88,7 +83,6 @@
               <p><span>Nulla sed nunc et tortor luctus faucibus.</span> Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
             </div>
           </div>
-
           <div class="service service--phone">
             <div class="icon"><img src="./assets/phone.svg" alt="phone"></div>
             <div class="service__about">
@@ -96,7 +90,6 @@
               <p><span>Sed porttitor placerat rhoncus. In at nunc</span> tellus. Maecenas blandit nunc ligula. Prae-sent elit leo.</p>
             </div>
           </div>
-
           <div class="service service--bubble">
             <div class="icon"><img src="./assets/bubble.svg" alt="bubble"></div>
             <div class="service__about">
@@ -104,7 +97,6 @@
               <p><span>Vivamus vel quam lacini a, tincidunt dui</span> non, vehicula nisi. Nulla a sem erat. Pellen-tesque egestas venenatis lorem .</p>
             </div>
           </div>
-
           <div class="service service--star">
             <div class="icon"><img src="./assets/star.svg" alt="star"></div>
             <div class="service__about">
@@ -112,18 +104,17 @@
               <p><span>Quisque hendrerit purus dapibus, ornare</span> <span>nibh vitae, viverra nibh. Fusce vitae</span> aliquam tellus.</p>
             </div>
           </div>
-
         </div>
       </div>
       <div class="services__bottom"></div>
-
     </div>
-
-
-
-
-
   </main>
+
+<script>
+  function toggleScreen(string) {
+    document.getElementsByClassName(string)[0].classList.toggle('black-screen');
+  }
+</script>
 
 </body>
 </html>
