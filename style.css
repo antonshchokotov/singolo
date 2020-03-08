@@ -289,34 +289,12 @@
   font-family: "Lato";
   font-weight: 400;
   margin-top: 10px;
-}
-
-.service__about > p > span {
-  word-spacing: 0.4em;
-}
-
-.service--bulb p > span {
-  word-spacing: 0.5em;
-}
-
-.service--heart p > span {
-  word-spacing: 0.15em;
-}
-
-.service--phone p > span {
-  word-spacing: 0.08em;
-}
-
-.service--bubble p > span {
-  word-spacing: 0.2em;
-}
-
-.service--star p > span:first-child {
-  word-spacing: 0.13em;
-}
-
-.service--star p > span:last-child {
-  word-spacing: 0.6em;
+  text-align: justify;
+  overflow: hidden;
+  display:
+    -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .smartphone-button-vertical {
