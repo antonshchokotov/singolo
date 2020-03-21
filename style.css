@@ -894,7 +894,7 @@ html {
 }
 
 .modal__button:hover {
-  background-color: rgba(214, 86, 79, 0.493);
+  border: .1em solid greenyellow;
 }
 
 .modal__description {
