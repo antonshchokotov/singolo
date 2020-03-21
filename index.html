@@ -15,15 +15,15 @@
           <h1 class="logo__text">SINGOLO<span>*</span></h1>
         </div>
         <nav class="navigation">
-          <a href="#" class="navigation__link">home</a>
+          <a href="#home" class="navigation__link">home</a>
           <span class="dot"></span>
-          <a href="#" class="navigation__link">services</a>
+          <a href="#services" class="navigation__link">services</a>
           <span class="dot"></span>
-          <a href="#" class="navigation__link">portfolio</a>
+          <a href="#portfolio" class="navigation__link">portfolio</a>
           <span class="dot"></span>
-          <a href="#" class="navigation__link">about</a>
+          <a href="#about" class="navigation__link">about</a>
           <span class="dot"></span>
-          <a href="#" class="navigation__link">contact</a>
+          <a href="#contact" class="navigation__link">contact</a>
         </nav>
       </div>
     </div>
@@ -31,30 +31,41 @@
   </header>
 
   <main class="main">
+    <span id="home"></span>
     <div class="hero">
-      <div class="hero__top">
-        <div class="content-wrapper">
-          <div class="hero__arrow hero__arrow--left">
-            <img src="./assets/chev-l.svg" alt="arrow-left">
-          </div>
-          <div class="hero__smartphone-vertical">
-            <img src="./assets/smartphone-vertical.svg" alt="smartphone-vertical">
-            <div class="hero__screen-vertical"></div>
-            <div class="smartphone-button-vertical" onclick="toggleScreen('hero__screen-vertical')"></div>
-          </div>
-          <div class="hero__smartphone-horizontal">
-            <img src="./assets/smartphone-horizontal.svg" alt="smartphone-horizontal">
-            <div class="hero__screen-horizontal"></div>
-            <div class="smartphone-button-horizontal" onclick="toggleScreen('hero__screen-horizontal')"></div>
-          </div>
-          <div class="hero__arrow hero__arrow--right">
-            <img src="./assets/chev-r.svg" alt="arrow-right">
+      <div id="slide1">
+        <div class="hero__top">
+          <div class="content-wrapper slide1__wrapper">
+            <div class="hero__smartphone-vertical">
+              <img src="./assets/smartphone-vertical.svg" alt="smartphone-vertical">
+              <div class="hero__screen-vertical"></div>
+              <div class="smartphone-button-vertical" onclick="toggleScreen('hero__screen-vertical')"></div>
+            </div>
+            <div class="hero__smartphone-horizontal">
+              <img src="./assets/smartphone-horizontal.svg" alt="smartphone-horizontal">
+              <div class="hero__screen-horizontal"></div>
+              <div class="smartphone-button-horizontal" onclick="toggleScreen('hero__screen-horizontal')"></div>
+            </div>
           </div>
         </div>
+        <div class="hero__bottom"></div>
       </div>
-      <div class="hero__bottom"></div>
+
+      <div class="hero__arrow hero__arrow--left">
+        <img src="./assets/chev-l.svg" alt="arrow-left">
+      </div>
+
+      <div class="hero__arrow hero__arrow--right">
+        <img src="./assets/chev-r.svg" alt="arrow-right">
+      </div>
+
+      <div id="slide2" class="">
+        <div class="hero2"></div>
+        <div class="hero2__bottom"></div>
+      </div>
     </div>
 
+    <span id="services"></span>
     <div class="services">
       <div class="services__top">
         <div class="services__description">
@@ -110,11 +121,12 @@
     </div>
   </main>
 
+  <span id="portfolio"></span>
   <section class="portfolio">
     <h2 class="portfolio__name">Portfolio</h2>
     <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     <nav class="portfolio__nav-bar">
-      <a href="#" class="portfolio__nav-element">All</a>
+      <a href="#" class="portfolio__nav-element portfolio__nav-element--active">All</a>
       <a href="#" class="portfolio__nav-element">Web Design</a>
       <a href="#" class="portfolio__nav-element">Graphic Design</a>
       <a href="#" class="portfolio__nav-element">Artwork</a>
@@ -135,6 +147,7 @@
     </div>
   </section>
   <div class="portfolio-bottom"></div>
+  <span id="about"></span>
   <section class="about-us">
     <h2 class="about-us__name">About Us</h2>
     <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -178,6 +191,7 @@
   <div class="about-us-bottom"></div>
 
      <!-- Part 3 -->
+     <span id="contact"></span>
      <div class="wrapper-part-3">
       <div class="form-wrapper">
           <section class="form-header">
@@ -187,15 +201,19 @@
           </section>
           <div class="wrapper-form-info">
               <div class="form">
-                  <form action="./assets/action.php" method="POST">
+                  <form method="get">
                       <input type="text" name="name" id="name" placeholder="Name (Required)" pattern="[a-zA-Z]+" required>
-                      <input type="email" id="email" name="email" placeholder="Email (Required)" pattern=".+@[a-zA-Z]+\.com" required>
+                      <input type="email" id="email" name="email" placeholder="Email (Required)" pattern=".+@[a-zA-Z\.]+" required>
                       <input type="text" name="subject" id="subject" placeholder="Subject">
                       <textarea id="textarea" name="textarea" rows="4" placeholder="Describe your project in detail..."></textarea>
                       <input type="submit" value="Submit" id="submit">
                   </form>
               </div>
-              <div class="contact-information">
+              <div class="modal">
+                <div class="modal__content">
+                  
+                </div>
+              </div>              <div class="contact-information">
                   <h3 class="contact-information-header">Contact Information</h3>
                   <p class="contact-information-text">Quisque hendretit purus dapibus, ornare nibh vitae. viver- ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequeat felis.</p>
                   <ul class="contact-data">
@@ -221,11 +239,7 @@
       </footer>
   </div>
 
-<script>
-  function toggleScreen(string) {
-    document.getElementsByClassName(string)[0].classList.toggle('black-screen');
-  }
-</script>
+<script src="./script.js" async></script>
 
 </body>
 </html>
