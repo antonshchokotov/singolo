@@ -27,7 +27,7 @@ function slideRight() {
       mainSlide.setAttribute('style', 'transition:left 0s;left:0;');
       setTimeout(() => {
         rightArrow.addEventListener('click', slideRight);
-      },100);
+      },200);
     }, 500);
   }, 0); 
 }

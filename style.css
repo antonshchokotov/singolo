@@ -920,7 +920,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1019px) {
+
+  #services, #portfolio, #about, #contact {
+    top: -70px;
+  }
 
   .header {
     width: 100%;
