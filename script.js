@@ -63,7 +63,7 @@ const scrollhandler = () => {
   navLinks.forEach(link => {
     const section = document.querySelector(link.hash);
 
-    if ( section.offsetTop <= fromTop + 200 ) {
+    if ( section.offsetTop <= fromTop + 160 ) {
       navLinks
         .forEach(link => link.classList.remove('navigation__link--active'));
       link.classList.add('navigation__link--active');
@@ -171,3 +171,27 @@ function toggleModal() {
   let modal = document.querySelector('.modal');
   modal.classList.toggle('show-modal');
 }
+
+
+// mobile menu
+
+const burger = document.querySelector('.burger');
+const logo = document.querySelector('.logo');
+const menuBack = document.querySelector('.menu-back');
+const menu = document.querySelector('.menu');
+const navMobile = document.querySelector('.navigation');
+
+function toggleMenu() {
+  menuBack.classList.toggle('menu-back-show');
+  menu.classList.toggle('menu-show');
+  burger.classList.toggle('burger-show');
+  logo.classList.toggle('logo-show');
+  navMobile.classList.toggle('navigation--menu-slide');
+  setTimeout(()=>{
+    menuBack.classList.toggle('menu-back-opacity');
+  }, 0);
+
+  navLinks.forEach(link => link.addEventListener('click', toggleMenu));
+}
+
+burger.addEventListener('click', toggleMenu);
