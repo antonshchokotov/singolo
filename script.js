@@ -17,19 +17,15 @@ function slideRight() {
   sideSlide.setAttribute('style', 'transition:left 0s;left:100%;');
   mainSlide.setAttribute('style', 'transition:left 0s;left:0;');
   setTimeout(() => {
-    sideSlide.setAttribute('style', 'transition:left 0.5s;left:0;');
-    mainSlide.setAttribute('style', 'transition:left 0.5s;left:-100%;');
+    sideSlide.setAttribute('style', 'transition:left 0.4s;left:0;');
+    mainSlide.setAttribute('style', 'transition:left 0.4s;left:-100%;');
     let oldMainSlide = mainSlide;
     mainSlide = sideSlide;
     sideSlide = oldMainSlide;
     setTimeout(() => {
-      sideSlide.setAttribute('style', 'transition:left 0s;left:-100%;');
-      mainSlide.setAttribute('style', 'transition:left 0s;left:0;');
-      setTimeout(() => {
         rightArrow.addEventListener('click', slideRight);
-      },200);
-    }, 500);
-  }, 0); 
+    }, 400);
+  }, 100); 
 }
 
 leftArrow.addEventListener('click', slideLeft);
@@ -38,19 +34,15 @@ function slideLeft() {
   sideSlide.setAttribute('style', 'transition:left 0s;left:-100%;');
   mainSlide.setAttribute('style', 'transition:left 0s;left:0;');
   setTimeout(() => {
-    sideSlide.setAttribute('style', 'transition:left 0.5s;left:0;');
-    mainSlide.setAttribute('style', 'transition:left 0.5s;left:100%;');
+    sideSlide.setAttribute('style', 'transition:left 0.4s;left:0;');
+    mainSlide.setAttribute('style', 'transition:left 0.4s;left:100%;');
     let oldMainSlide = mainSlide;
     mainSlide = sideSlide;
     sideSlide = oldMainSlide;
     setTimeout(() => {
-      sideSlide.setAttribute('style', 'transition:left 0s;left:100%;');
-      mainSlide.setAttribute('style', 'transition:left 0s;left:0;');
-      setTimeout(() => {
         leftArrow.addEventListener('click', slideLeft);
-      },100);
-    }, 500);
-  }, 0); 
+    }, 400);
+  }, 100); 
 }
 
 
