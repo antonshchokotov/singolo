@@ -1227,6 +1227,7 @@ body::-webkit-scrollbar {
 
 
   .navigation {
+    width: auto;
     display: none;
   }
 
