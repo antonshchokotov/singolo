@@ -1543,3 +1543,11 @@ body::-webkit-scrollbar {
   }
 
 }
+
+@media (min-width: 678px) {
+
+  .burger {
+    display: none;
+  }
+
+}
